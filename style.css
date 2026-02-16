@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	outine: 1px solid red;
+	/*outline: 1px solid red;*/
 }
 body {
 	margin: 0;
@@ -11,10 +11,6 @@ body {
 		#0a0015 40%,
 	    #000000 100%);
 	min-height: 100vh;
-
-	/*background-image: linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px), 
-	linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-	background-size: 40px 40px;*/
 	overflow-x: hidden;
 }
 .navbar {
@@ -65,6 +61,12 @@ align-items: center;
 	margin: 20px;
 	flex-wrap: wrap;
 }
+.png {
+	width: 64px;
+	height: 64px;
+	align-self: center;
+	margin: 10px;
+}
 .cards {
 	text-align: center;
 	background: rgba(20, 0, 40, 0.6);
@@ -72,7 +74,7 @@ align-items: center;
 	font-size: 1.4rem;
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 20px;
 	border-radius: 16px;
 	border: 1px solid #a855f7;
 	box-shadow: 
@@ -116,4 +118,59 @@ align-items: center;
 	0% { box-shadow: 0 0 10px #a855f7 }
 	50% { box-shadow: 0 0 30px #a855f7 }
 	100% { box-shadow: 0 0 10px #a855f7 }
+}
+footer {
+	margin-top: 50px;
+	background-image: linear-gradient(180deg, black,  #090422, #180f4a);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 3rem;
+	gap: 30px;
+	border-top: 1px solid purple;
+}
+.footer-title {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+.footer-title h2 {
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+	-webkit-text-stroke: 0.5px white;
+	color: #2e1065;
+	text-shadow: 0 0 10px
+	rgba(255,255,255,0.5)
+}
+.footer-title span {
+	color: white;
+	font-size: 1.2rem;
+	text-shadow: 0 0 10px
+	rgba(255,255,255,0.5)
+}
+.footer-info {
+	display: flex;
+	width: 40%;
+	text-align: center;
+	flex-direction: column;
+	gap: 15px;
+}
+.footer-links {
+	text-decoration: none;
+	padding: 5px 7px;
+	width: fit-content;
+	align-self: center;
+	color: white;
+
+	transition: all 0.2s ease;
+}
+.footer-links:hover {
+	transform: translateY(-3px) scale(1.2);
+}
+@media (max-width: 460px) {
+	footer {
+		flex-wrap: wrap;
+	}
 }
