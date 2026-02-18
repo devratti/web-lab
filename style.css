@@ -1,8 +1,9 @@
+/*-------------- UNIVERSAL CSS --------------*/
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	/*outline: 1px solid red;*/
+	outine: 1px solid red;*/
 }
 body {
 	margin: 0;
@@ -12,18 +13,42 @@ body {
 	    #000000 100%);
 	min-height: 100vh;
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	flex: 1;
+	margin: 10px;
 }
 .navbar {
 	padding: 10px;
-	margin: 3px;
+	margin: 10px;
+	padding-bottom: 80px;
+	/*border-bottom: 1px solid purple;*/
 }
 .navbar-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 70px;
+	width: 100;
 }
+
+.navigation {
+    margin-top: 70px;
+    display: flex;
+    width: 100%;
+}
+.navigation a {
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(1.3rem, 2.2rem, 3.3rem); 1.3rem;
+    color: #2e1065;
+    -webkit-text-stroke: 0.2px white;
+
+}
+
 .img {
 	margin-top: 15px;
 	height: 70px;
@@ -52,73 +77,15 @@ align-items: center;
 	text-shadow: 0 0 10px
 	rgba(255,255,255,0.5)
 }
-.cards-container {
-	min-height: 80vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 40px;
-	margin: 20px;
-	flex-wrap: wrap;
+@media (max-width: 780px) {
+	.navbar {
+		margin-bottom: 70px;
+	}
+	.navigation {
+		margin-top: 50px;
+	}
 }
-.png {
-	width: 64px;
-	height: 64px;
-	align-self: center;
-	margin: 10px;
-}
-.cards {
-	text-align: center;
-	background: rgba(20, 0, 40, 0.6);
-	padding: 1rem;
-	font-size: 1.4rem;
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	border-radius: 16px;
-	border: 1px solid #a855f7;
-	box-shadow: 
-	0 0 5px #a855f7, 
-	0 0 15px #a855f7, 
-    0 0 30px #a855f7;
-	flex: 1 1 280px;
-	min-height: 300px;
-	justify-content: space-between;
-	transition: all 0.3s ease;	
-	backdrop-filter: blur(10px);
-	animation: pulseGlow 3s infinite;
-}
-.cards:hover {
-	transform: translateY(-5px) scale(1.02);
-	box-shadow:
-	 0 0 10px #ff00ff, 0 0 25px #ff00ff, 0 0 50px #ff00ff;
-}
-.cards a {
-	text-decoration: none;
-	color: white;
-	width: fit-content;
-	align-self: center;
-	background-color: #8b5cf6;
-	border-radius: 10px;
-	padding: 5px 7px;
 
-	transition: all 0.3s ease;
-}
-.cards a:hover {
-	transform: translateY(-10px);
-}
-.cards p {
-	line-height: 1.7rem;
-	color: #c7c9d1;
-}
-.cards h2 {
-	color: #f3f4f6;
-}
-@keyframes pulseGlow {
-	0% { box-shadow: 0 0 10px #a855f7 }
-	50% { box-shadow: 0 0 30px #a855f7 }
-	100% { box-shadow: 0 0 10px #a855f7 }
-}
 footer {
 	margin-top: 50px;
 	background-image: linear-gradient(180deg, black,  #090422, #180f4a);
@@ -174,3 +141,89 @@ footer {
 		flex-wrap: wrap;
 	}
 }
+
+
+/*-------------- UNIVERSAL CSS END --------------*/
+
+/*-------------- LABS CSS --------------*/
+
+.cards-container {
+	min-height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	margin: 20px;
+	flex-wrap: wrap;
+}
+.png {
+	width: 64px;
+	height: 64px;
+	align-self: center;
+	margin: 10px;
+}
+.cards {
+	text-align: center;
+	background: rgba(20, 0, 40, 0.6);
+	padding: 1rem;
+	font-size: 1.4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border-radius: 16px;
+	border: 1px solid #a855f7;
+	box-shadow: 
+	0 0 5px #a855f7, 
+	0 0 15px #a855f7, 
+    0 0 30px #a855f7;
+	flex: 1 1 280px;
+	min-height: 400px;
+	justify-content: space-between;
+	transition: all 0.3s ease;	
+	backdrop-filter: blur(10px);
+	animation: pulseGlow 3s infinite;
+}
+.cards:hover {
+	transform: translateY(-5px) scale(1.02);
+	box-shadow:
+	 0 0 10px #ff00ff, 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+}
+.cards a {
+	text-decoration: none;
+	color: white;
+	width: fit-content;
+	align-self: center;
+	background-color: #8b5cf6;
+	border-radius: 10px;
+	padding: 5px 7px;
+
+	transition: all 0.3s ease;
+}
+.cards a:hover {
+	transform: translateY(-10px);
+}
+.cards p {
+	line-height: 1.7rem;
+	color: #c7c9d1;
+}
+.cards h2 {
+	color: #f3f4f6;
+}
+@keyframes pulseGlow {
+	0% { box-shadow: 0 0 10px #a855f7 }
+	50% { box-shadow: 0 0 30px #a855f7 }
+	100% { box-shadow: 0 0 10px #a855f7 }
+}
+
+/*-------------- LABS CSS END --------------*/
+
+/*-------------- HOME CSS --------------*/
+
+
+
+
+
+
+
+
+/*-------------- HOME CSS END --------------*/
