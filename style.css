@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	utline: 1px solid red;*/
+	outine: 1px solid red;*/
 }
 body {
 	margin: 0;
@@ -53,7 +53,7 @@ main {
 	border-left: 1px solid white;
 }
 .link {
-font-family: "Inter", sans-serif;
+font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -274,11 +274,76 @@ font-family: "Inter", sans-serif;
 /*-------------- LABS CSS END --------------*/
 
 /*-------------- HOME CSS --------------*/
-.home-container {
-	min-height: auto;
-}
+.hero-container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	gap: 30px;
+	text-align: center;
+	color: white;
 
+min-height: 50vh;
+	}
+	.btn-hero {
+		margin-top: 15px;
 
+		text-decoration: none;
+		display: inline-block;
+		padding: 17px 30px;
+		align-self: center;
+		width: fit-content;
+
+		background: linear-gradient(135deg, #4b1fa6, #9473fd);
+		border-radius:26px;
+
+		font-size: 20px;
+		letter-spacing: 1px;
+		color: white;
+		box-shadow: 0 0 20px rgba(148, 115, 253, 0.45);
+
+		transition: all 0.25s;
+	}
+	.btn-hero:hover {
+		transform: translateY(-5px) scale(1.03);
+		background: linear-gradient(135deg, #5f2fd6, #b69cff);
+    box-shadow: 0 0 30px rgba(148, 115, 253, 0.75);
+	}
+	.btn-hero:active {
+		transform: scale(0.97);
+    background: linear-gradient(135deg, #3a1480, #7f5fe6);
+    box-shadow: 0 0 12px rgba(148, 115, 253, 0.5);
+	}
+	.hero-container p {
+		font-size: clamp(1.2rem, 1.4rem, 1.6rem);
+		font-family: "Inter", sans-serif;
+	}
+	.title-hero {
+		font-size: clamp(1rem, 3rem, 3.5rem);
+		letter-spacing: 5px;
+		font-family: "Orbitron", sans-serif;
+
+		margin-bottom: 20px;
+
+	}
+	/*---Media Queries Hero---*/
+	@media (max-width: 768px) {
+		.navbar {
+			padding-bottom: 0px;
+		}
+	}
+	@media (max-width: 500px) {
+		.hero-container {
+			padding-top: 10px;
+		}
+		.title-hero {
+			font-size: clamp(1rem, 2rem, 3rem);
+		}
+	}
+
+	/*---Media Queries Hero End---*/
 
 
 
