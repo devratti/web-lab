@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	outine: 1px solid red;*/
+	utline: 1px solid red;*/
 }
 body {
 	margin: 0;
@@ -71,6 +71,7 @@ font-family: "Orbitron", sans-serif;
 	transform: scale(1.1) translateY(-3px);
 }
 .img {
+	display: none;*/
 	margin-top: 15px;
 	height: 70px;
 	width: clamp(30%, 50%, 60%);
@@ -92,7 +93,7 @@ align-items: center;
 .title {
 	font-family: "Orbitron", sans-serif;
   font-weight: 900;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   font-style: normal;
 
 	width: 100%;
@@ -101,7 +102,7 @@ align-items: center;
 	white-space: nowrap;
 	-webkit-text-stroke: 1.3px white;
 	text-shadow: 0 0 10px
-	rgba(255,255,255,0.5)
+	rgba(255,255,255,0.5);
 }
 @media (max-width: 780px) {
 	.navbar {
@@ -165,6 +166,10 @@ footer {
 @media (max-width: 460px) {
 	footer {
 		flex-wrap: wrap;
+	}
+	.footer-info {
+		flex-direction: row;
+		width: auto;
 	}
 }
 
@@ -275,6 +280,7 @@ font-family: "Inter", sans-serif;
 
 /*-------------- HOME CSS --------------*/
 .hero-container {
+
 	padding-top: 50px;
 	padding-bottom: 50px;
 	display: flex;
@@ -350,3 +356,7 @@ min-height: 50vh;
 
 
 /*-------------- HOME CSS END --------------*/
+	background-image: url(img/background.webp);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
