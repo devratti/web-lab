@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;	
+	outlie: 1px solid red;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+background:
+    radial-gradient(circle at 20% 20%, #a855f7, transparent 40%),
+    radial-gradient(circle at 80% 0%, #7c3aed, transparent 40%),
+    radial-gradient(circle at 20% 80%, #a855f7, transparent 40%),
+    radial-gradient(circle at 80% 80%, #7c3aed, transparent 40%),
+    #0f0a1f;
+}
+.login-card {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 18px;
+
+	background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+
+ width: 360px;
+
+	padding: 40px;
+}
+.login-title {
+	font-family: "Orbitron", sans-serif;
+	font-size: 2.2rem;
+	letter-spacing: 5px;
+
+color: white;
+-webkit-text-stroke: 1px black;
+
+	padding-bottom: 8px;
+
+
+	border-bottom: 1px solid #2e1065;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.form-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+label {
+	font-size: 1rem;
+	color: #ddd6fe;
+}
+input {
+	padding: 10px 12px;
+
+	border-radius: 8px;
+
+	  border: 1px solid rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.1);
+
+	outline: none;
+}
+input:focus {
+	border-color: #a855f7;
+}
+button {
+	font-family: "Orbitron", sans-serif;
+	margin-top: 15px;
+
+	width: fit-content;
+	align-self: center;
+
+	font-size: 1rem;
+	letter-spacing: 1px;
+
+	padding: 11px 17px 11px 17px;
+
+	border-radius: 12px;
+	border: 1px solid rgba(255,255,255,0.2);
+
+	backdrop-filter: blur(10px);
+	background: transparent;
+
+	transition: all 0.3s ease;
+}
+
+button:hover {
+	color: white;
+
+transform: scale(1.05);
+	background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7,
+    #6d28d9
+  );
+
+}
+@media (max-width: 375px) {
+	.login-card {
+		width: 300px;
+	}
+}
