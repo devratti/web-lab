@@ -9,7 +9,7 @@ button.addEventListener("click",
  	}
 
 else if (user.value === "admin" && password.value === "123") {
-	window.location.href = "index.html"
+	window.location.href = "home.html"
 }
 else {
 	alert("Usuário ou senha incorreta")
